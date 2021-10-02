@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ticket Please</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="linklogin"><u>Login</u></string>
+    <string name="linkregister"><u>Register</u></string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="belum_punya_akun">Belum Punya Akun?</string>
+    <string name="e_mail">E-mail</string>
+    <string name="name">Name</string>
+    <string name="sudah_punya_akun">Sudah Punya Akun?</string>
+</resources>
