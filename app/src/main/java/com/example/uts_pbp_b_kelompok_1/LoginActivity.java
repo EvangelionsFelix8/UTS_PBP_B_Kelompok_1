@@ -26,4 +26,5 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     //Coba Clone sm Update ya Lix :v (Christian)
+//    Oke Monggo dicoba saja gpp :v ( Felix )
 }
