@@ -24,4 +24,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    //Coba Clone sm Update ya Lix :v (Christian)
 }
