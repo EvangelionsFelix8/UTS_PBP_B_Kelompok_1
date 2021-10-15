@@ -10,4 +10,8 @@
     <string name="e_mail">E-mail</string>
     <string name="name">Name</string>
     <string name="sudah_punya_akun">Sudah Punya Akun?</string>
+    <string name="home">Home</string>
+    <string name="transaksi">Transaksi</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="profile">Profile</string>
 </resources>
