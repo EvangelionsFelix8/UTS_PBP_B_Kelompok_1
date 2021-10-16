@@ -1,6 +1,7 @@
-package com.example.uts_pbp_b_kelompok_1.Fragment;
+package com.example.uts_pbp_b_kelompok_1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,12 +14,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.uts_pbp_b_kelompok_1.Adapter.EventAdapter;
+import com.example.uts_pbp_b_kelompok_1.DetailEventActivity;
 import com.example.uts_pbp_b_kelompok_1.DummyEvent;
 import com.example.uts_pbp_b_kelompok_1.Event;
+import com.example.uts_pbp_b_kelompok_1.MainActivity;
 import com.example.uts_pbp_b_kelompok_1.R;
 import com.example.uts_pbp_b_kelompok_1.databinding.FragmentHomeBinding;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -32,9 +37,9 @@ public class FragmentHome extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //return inflater.inflate(R.layout.fragment_home, container, false);
+        
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false);
         return binding.getRoot();
     }
@@ -43,14 +48,31 @@ public class FragmentHome extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        //binding = DataBindingUtil.setContentView((Activity) this.getContext(), R.layout.fragment_home);
-
         listEvent = new DummyEvent().dataEvent;
 
-        EventAdapter adapter = new EventAdapter(listEvent);
+        EventAdapter adapter = new EventAdapter(getContext(), listEvent);
         binding.rvEvent.setLayoutManager(new LinearLayoutManager((Activity) this.getContext()));
         binding.rvEvent.setAdapter(adapter);
     }
+
+   /*public void onDetailClick(View view){
+        //ImageButton btnDetail;
+       switch (view.getId()){
+           case R.id.btnDetail:
+               Intent intent = new Intent(this.getContext(), DetailEventActivity.class);
+               startActivity(intent);
+               break;
+       }
+        /*btnDetail = view.findViewById(R.id.btnDetail);
+        btnDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Ini masuk ke detail event
+                Intent detailEventActivity = new Intent(getActivity(), DetailEventActivity.class);
+                startActivity(detailEventActivity);
+            }
+        }); */
+   // }
 }
 
 

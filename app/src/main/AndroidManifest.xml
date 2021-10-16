@@ -32,6 +32,11 @@
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".DetailEventActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
