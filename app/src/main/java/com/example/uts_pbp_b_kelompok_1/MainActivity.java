@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.uts_pbp_b_kelompok_1.Fragment.FragmentHome;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,21 +19,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        changeFragment(new FragmentHome());
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private final BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            if(item.getItemId() == R.id.menuHome){
-//                changeFragment(new HomeFragment());
-            }
-            else if(item.getItemId() == R.id.menuTransaksi){
+            if (item.getItemId() == R.id.menuHome) {
+                changeFragment(new FragmentHome());
+            } else if (item.getItemId() == R.id.menuTransaksi) {
 //                changeFragment(new TodoListFragment());
-            }
-            else if(item.getItemId() == R.id.menuRiwayat){
+            } else if (item.getItemId() == R.id.menuRiwayat) {
 //                changeFragment(new TodoListFragment());
-            }
-            else if(item.getItemId() == R.id.menuProfile){
+            } else if (item.getItemId() == R.id.menuProfile) {
 //                changeFragment(new TodoListFragment());
             }
             return true;
