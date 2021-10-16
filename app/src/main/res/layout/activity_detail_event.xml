@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:id="@+id/tvEventDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="EVENT DETAILS"
+            android:textSize="28dp"
+            android:fontFamily="@font/rubikmono"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/purapurainimap"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/header" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/purapurainimap"
+        app:cardBackgroundColor="#D3C5C5">
+
+        <TextView
+            android:id="@+id/tvEventNameDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/purapurainimap"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:text="Nama Event"
+            android:textColor="@color/black"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/tvEventDateDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="DD Month YYYY"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tvVenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEventDateDetail"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="20dp"
+            android:text="Venue"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvEventVenueDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVenue"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="20dp"
+            android:text="Gedung Dummy"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEventVenueDetail"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="20dp"
+            android:text="Address"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvEventAddressDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAddress"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20dp"
+            android:text="Jalan Contoh saja"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEventAddressDetail"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="20dp"
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvEventPriceDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginEnd="20dp"
+            android:text="Rp XX.XXX,XX"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            app:cardBackgroundColor="@color/putihCustom">
+
+            <TextView
+                android:id="@+id/tvPriceFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:text="Rp XX.XXX,XX"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPesanTiket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Pesan Tiket"
+                app:cornerRadius="30dp" />
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
