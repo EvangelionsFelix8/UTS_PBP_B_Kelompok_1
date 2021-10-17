@@ -10,17 +10,17 @@ public class Event {
     private String tanggalEvent;
     private String namaEvent;
     private String urlImage;
-   /* private String venueEvent;
+    private String venueEvent;
     private String alamatEvent;
-    private double hargaEvent; */
+    private double hargaEvent;
 
     public Event(String tanggalEvent, String namaEvent, String urlImage, String venueEvent, String alamatEvent, double hargaEvent) {
         this.tanggalEvent = tanggalEvent;
         this.namaEvent = namaEvent;
         this.urlImage = urlImage;
-       /* this.venueEvent = venueEvent;
+        this.venueEvent = venueEvent;
         this.alamatEvent = alamatEvent;
-        this.hargaEvent = hargaEvent; */
+        this.hargaEvent = hargaEvent;
     }
 
     public String getTanggalEvent() {
@@ -47,7 +47,7 @@ public class Event {
         this.urlImage = urlImage;
     }
 
-    /*public String getVenueEvent() {
+    public String getVenueEvent() {
         return venueEvent;
     }
 
@@ -69,7 +69,7 @@ public class Event {
 
     public void setHargaEvent(double hargaEvent) {
         this.hargaEvent = hargaEvent;
-    } */
+    }
 
     @BindingAdapter("android:loadImage")
     public static void loadImage(ImageView imageView, String imgURL){

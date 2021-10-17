@@ -54,25 +54,6 @@ public class FragmentHome extends Fragment {
         binding.rvEvent.setLayoutManager(new LinearLayoutManager((Activity) this.getContext()));
         binding.rvEvent.setAdapter(adapter);
     }
-
-   /*public void onDetailClick(View view){
-        //ImageButton btnDetail;
-       switch (view.getId()){
-           case R.id.btnDetail:
-               Intent intent = new Intent(this.getContext(), DetailEventActivity.class);
-               startActivity(intent);
-               break;
-       }
-        /*btnDetail = view.findViewById(R.id.btnDetail);
-        btnDetail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Ini masuk ke detail event
-                Intent detailEventActivity = new Intent(getActivity(), DetailEventActivity.class);
-                startActivity(detailEventActivity);
-            }
-        }); */
-   // }
 }
 
 

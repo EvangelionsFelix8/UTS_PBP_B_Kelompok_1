@@ -19,4 +19,11 @@
     <string name="username1">Username!</string>
     <string name="judulevent">Judul Event</string>
     <string name="tanggalevent">Tanggal Event</string>
+    <string name="venue">Venue:</string>
+    <string name="address">Address:</string>
+    <string name="nama_tempat">Nama Tempat</string>
+    <string name="price">Price:</string>
+    <string name="rp_xx_xxx_xx">Rp XX.XXX,XX</string>
+    <string name="pesan_tiket">Pesan Tiket</string>
+    <string name="event_details">EVENT DETAILS</string>
 </resources>

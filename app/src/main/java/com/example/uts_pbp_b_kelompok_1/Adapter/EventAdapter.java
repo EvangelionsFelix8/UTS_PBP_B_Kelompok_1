@@ -14,6 +14,7 @@ import com.example.uts_pbp_b_kelompok_1.DetailEventActivity;
 import com.example.uts_pbp_b_kelompok_1.Event;
 import com.example.uts_pbp_b_kelompok_1.R;
 import com.example.uts_pbp_b_kelompok_1.databinding.RvEventBinding;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +54,15 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.viewHolder> 
         holder.btnDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context,DetailEventActivity.class));
+                Intent DetailEvent = new Intent(context, DetailEventActivity.class);
+//                Mengubah Objek pegawai menjadi format JSON string dengan GSON
+                Gson gson = new Gson();
+                String strEvent = gson.toJson(event);
+
+//                Menyisipkan data json string ke intent
+                DetailEvent.putExtra("detailEvent", strEvent);
+
+                context.startActivity(DetailEvent);
             }
         });
     }

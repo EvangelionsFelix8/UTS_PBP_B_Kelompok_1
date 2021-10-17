@@ -19,7 +19,7 @@ public class DummyEvent {
             "Pentas Kebudayaan Solo",
             "https://lh3.googleusercontent.com/proxy/CBofyF-mgUa1cNXqmh4yTLjL1RobPLhc2dl935GbM7mT1CsJulu5mgLMUznm7VpNceb6srrrNpD-BpYDGbrGY7kEQ-WTtejVV503jL4_v2_o7uD7hDEL",
             "Graha Saba Buana",
-            " Jalan Letjen Suprapto No.80-B, Sumber, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57137",
+            "Jalan Letjen Suprapto No.80-B, Sumber, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57137",
             50000.00);
     public static final Event event2 = new Event(
             "25 Desember 2021",
@@ -40,7 +40,7 @@ public class DummyEvent {
             "Pentas Seni Budaya",
             "https://lh3.googleusercontent.com/proxy/g-0ngTRI-5IsH8zOk4hCDgO3N0HOMcJUBoOvhuMmhb2BzmREpuzZPbhQ32jjTUbqlr20xkf0eVUbbQWs8hgRjAi8eoqExJG4G2L_GlIJ6LRNP5MkVrEDr6hT7WuIw9KXwcBGdIADRwccwamqjW3cpz9DTEdLOlOuzmuQ3w5UFjJFdNAKUrMkYQ",
             "Balai Kota Surakarta",
-            " Jalan Jend. Sudirman No.2, Kp. Baru, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57133",
+            "Jalan Jend. Sudirman No.2, Kp. Baru, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57133",
             60000.00);
 
 }
