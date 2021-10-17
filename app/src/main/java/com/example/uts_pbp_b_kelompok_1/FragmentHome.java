@@ -37,7 +37,6 @@ public class FragmentHome extends Fragment {
     private TextView tvUsername;
     private User user;
     private UserPreferences userPreferences;
-    private Button btnLogout;
 
     ArrayList<Event> listEvent;
     FragmentHomeBinding binding;
@@ -58,35 +57,16 @@ public class FragmentHome extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        btnLogout = view.findViewById(R.id.btnLogout);
         tvUsername = view.findViewById(R.id.tvUsername);
         userPreferences = new UserPreferences(this.getContext());
         user = userPreferences.getUserLogin();
 
         tvUsername.setText(user.getUsername());
-
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                userPreferences.logout();
-                Toast.makeText(getContext(), "Berhasil Logout", Toast.LENGTH_SHORT).show();
-                checkLogin();
-            }
-        });
         listEvent = new DummyEvent().dataEvent;
 
         EventAdapter adapter = new EventAdapter(getContext(), listEvent);
         binding.rvEvent.setLayoutManager(new LinearLayoutManager((Activity) this.getContext()));
         binding.rvEvent.setAdapter(adapter);
-    }
-
-    private void checkLogin() {
-        if (!userPreferences.checkLogin()) {
-            startActivity(new Intent(getContext(), LoginActivity.class));
-            getActivity().finish();
-        } else {
-            Toast.makeText(getContext(), "Heyy Kamu Sudah Login !!", Toast.LENGTH_SHORT).show();
-        }
     }
 }
 
