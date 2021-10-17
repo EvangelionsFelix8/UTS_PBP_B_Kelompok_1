@@ -64,8 +64,8 @@
                     android:layout_below="@id/purapurainimap"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:text="@{event.namaEvent}"
                     android:hint="@string/judulevent"
+                    android:text="@{event.namaEvent}"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
 
@@ -76,9 +76,9 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="20dp"
+                    android:hint="@string/tanggalevent"
                     android:text="@{event.tanggalEvent}"
                     android:textColor="@color/black"
-                    android:hint="@string/tanggalevent"
                     android:textSize="20sp" />
             </androidx.cardview.widget.CardView>
 
@@ -90,10 +90,10 @@
                     android:id="@+id/fieldVenue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="100dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginTop="100dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvVenue"
@@ -102,27 +102,27 @@
                         android:text="@string/venue"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvEventVenueDetail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{event.venueEvent}"
                         android:hint="@string/nama_tempat"
+                        android:text="@{event.venueEvent}"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/fieldAlamat"
-                    android:layout_below="@id/fieldVenue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_below="@id/fieldVenue"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvAddress"
@@ -130,28 +130,28 @@
                         android:layout_height="wrap_content"
                         android:text="@string/address"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvEventAddressDetail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{event.alamatEvent}"
                         android:hint="@string/address"
+                        android:text="@{event.alamatEvent}"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/fieldPrice"
-                    android:layout_below="@+id/fieldAlamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_below="@+id/fieldAlamat"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="15dp"
-                    android:layout_marginEnd="20dp">
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvPrice"
@@ -159,15 +159,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/price"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvEventPriceDetail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{String.valueOf(event.hargaEvent)}"
                         android:hint="@string/rp_xx_xxx_xx"
+                        android:text="@{String.valueOf(event.hargaEvent)}"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -185,8 +185,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="30dp"
-                    android:text="@{String.valueOf(event.hargaEvent)}"
                     android:hint="@string/rp_xx_xxx_xx"
+                    android:text="@{String.valueOf(event.hargaEvent)}"
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
