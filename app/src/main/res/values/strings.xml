@@ -26,6 +26,12 @@
     <string name="rp_xx_xxx_xx">Rp XX.XXX,XX</string>
     <string name="pesan_tiket">Pesan Tiket</string>
     <string name="event_details">EVENT DETAILS</string>
+    <string name="nama">Nama</string>
+    <string name="nama_pengguna">Nama Pengguna</string>
+    <string name="username_pengguna">Username Pengguna</string>
+    <string name="email_pengguna">Email Pengguna</string>
+    <string name="alamat_pengguna">Alamat Pengguna</string>
+    <string name="logout">Logout</string>
     <string-array name="section_array">
         <item>VVIP</item>
         <item>VIP</item>
