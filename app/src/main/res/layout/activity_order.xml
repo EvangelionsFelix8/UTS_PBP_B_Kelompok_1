@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="event"
+            type="com.example.uts_pbp_b_kelompok_1.Event" />
+    </data>
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/backgroundColor">
-
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -42,7 +47,7 @@
             android:id="@+id/tvEventNameOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ini Nama Event"
+            android:text="@{event.namaEvent}"
             android:textSize="24dp"
             android:textColor="@color/black"/>
         <TextView
@@ -50,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Rp XX.XXX,XX"
+            android:text="@{String.valueOf(event.hargaEvent)}"
             android:textSize="20dp"
             android:textColor="@color/black"/>
         <TextView
@@ -101,10 +106,13 @@
                 android:layout_gravity="left"
                 android:textColor="@color/black"/>
             <Spinner
+                android:background="@color/white"
+                android:id="@+id/spinnerSection"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:spinnerMode="dropdown"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:entries="@array/section_array"/>
         </LinearLayout>
 
         <LinearLayout
@@ -121,9 +129,12 @@
                 android:layout_gravity="left"
                 android:textColor="@color/black"/>
             <Spinner
+                android:background="@color/white"
+                android:id="@+id/spinnerSeatNumber"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:spinnerMode="dropdown"/>
+                android:spinnerMode="dropdown"
+                android:entries="@array/seat_array"/>
         </LinearLayout>
     </LinearLayout>
     <androidx.cardview.widget.CardView
@@ -204,5 +215,5 @@
         android:textColor="@color/backgroundColor"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
-
 </RelativeLayout>
+</layout>

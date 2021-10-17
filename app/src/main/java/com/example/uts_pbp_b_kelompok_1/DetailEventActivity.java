@@ -38,7 +38,16 @@ public class DetailEventActivity extends AppCompatActivity{
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                //onBackPressed();
+            }
+        });
+
+        MaterialButton btnPesanTiket = findViewById(R.id.btnPesanTiket);
+        btnPesanTiket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DetailEventActivity.this, OrderActivity.class);;
+                startActivity(intent);
             }
         });
     }
