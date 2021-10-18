@@ -1,255 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
         <variable
             name="event"
             type="com.example.uts_pbp_b_kelompok_1.Event" />
     </data>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/backgroundColor">
-    <LinearLayout
-        android:id="@+id/header"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/backgroundColor"
-            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
-
-        <TextView
-            android:id="@+id/tvEventDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="YOUR ORDER"
-            android:textSize="28dp"
-            android:fontFamily="@font/rubikmono"
-            android:textColor="@color/white"/>
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_below="@id/header"
-        android:id="@+id/card1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        app:cardBackgroundColor="@color/putihCustom">
-        <androidx.cardview.widget.CardView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#d3c5c5">
-            <TextView
-                android:id="@+id/tvEventNameOrder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@{event.namaEvent}"
-                android:textSize="24dp"
-                android:textColor="@color/black"/>
-            <TextView
-                android:id="@+id/tvEventPriceOrder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="10dp"
-                android:text="@{String.valueOf(event.hargaEvent)}"
-                android:textSize="20dp"
-                android:textColor="@color/black"/>
-        </androidx.cardview.widget.CardView>
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColor">
 
-        <TextView
-            android:id="@+id/tvKetentuan1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Tiket hanya berlaku untuk satu orang"
-            android:textSize="14dp"
-            android:textColor="@color/black"/>
-        <TextView
-            android:id="@+id/tvKetentuan2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
-            android:text="Tiket yang sudah dibeli tidak dapat direfund"
-            android:textSize="14dp"
-            android:textColor="@color/black"/>
-        <TextView
-            android:id="@+id/tvKetentuan3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:text="Wajib menunjukkan tiket saat datang ke lokasi"
-            android:textSize="14dp"
-            android:textColor="@color/black"/>
-    </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:id="@+id/line2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card1"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih Waktu"
-                android:textSize="18dp"
-                android:layout_gravity="left"
-                android:textColor="@color/white"/>
-            <Spinner
-                android:background="@color/white"
-                android:id="@+id/spinnerTime"
+            <LinearLayout
+                android:id="@+id/header"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:spinnerMode="dropdown"
-                android:textColor="@color/black"
-                android:entries="@array/time_array"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="40dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih Section"
-                android:textSize="18dp"
-                android:layout_gravity="left"
-                android:textColor="@color/white"/>
-            <Spinner
-                android:background="@color/white"
-                android:id="@+id/spinnerSection"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:spinnerMode="dropdown"
-                android:textColor="@color/black"
-                android:entries="@array/section_array"/>
-        </LinearLayout>
+                android:layout_height="64dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="40dp"
->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pilih Seat"
-                android:textSize="18dp"
-                android:layout_gravity="left"
-                android:textColor="@color/white"/>
-            <Spinner
-                android:background="@color/white"
-                android:id="@+id/spinnerSeatNumber"
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/backgroundColor"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+                <TextView
+                    android:id="@+id/tvEventDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/your_order"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/rubikmono"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:spinnerMode="dropdown"
-                android:entries="@array/seat_array"/>
-        </LinearLayout>
-    </LinearLayout>
-    <androidx.cardview.widget.CardView
-        android:layout_below="@id/line2"
-        android:id="@+id/card2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        app:cardBackgroundColor="@color/putihCustom">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#D3C5C5">
-            <TextView
-                android:id="@+id/tvDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tanggal"
-                android:textSize="16dp"
+                android:layout_height="210dp"
+                android:layout_below="@id/header"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"
-                android:textColor="@color/black"/>
-            <TextView
-                android:id="@+id/tvPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Harga"
-                android:textSize="16dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="20dp"
-                android:textColor="@color/black"/>
-        </androidx.cardview.widget.CardView>
+                android:layout_marginRight="30dp"
+                app:cardBackgroundColor="@color/putihCustom">
 
-        <TextView
-            android:id="@+id/tvPaymentMethod"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Metode Pembayaran"
-            android:textSize="16dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="20dp"
-            android:textColor="@color/black"/>
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp">
-            <RadioButton
-                android:layout_width="wrap_content"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#d3c5c5">
+
+                    <TextView
+                        android:id="@+id/tvEventNameOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:hint="@string/judulevent"
+                        android:text="@{event.namaEvent}"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvEventPriceOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="10dp"
+                        android:hint="@string/harga"
+                        android:layout_marginBottom="10dp"
+                        android:text="@{String.valueOf(event.hargaEvent)}"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ketentuan"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvKetentuan1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="115dp"
+                    android:text="@string/tiket_hanya_berlaku_untuk_satu_orang"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvKetentuan2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="145dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/tiket_yang_sudah_dibeli_tidak_dapat_direfund"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvKetentuan3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="175dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/wajib_menunjukkan_tiket_saat_datang_ke_lokasi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginStart="20dp"
-                android:text="Virtual Account"
-                android:id="@+id/rbVirtualAccount"/>
-            <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_below="@id/card1"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_section"
+                        android:textSize="18sp"
+                        android:layout_gravity="start"
+                        android:textColor="@color/white"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <Spinner
+                            android:id="@+id/spinnerSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:entries="@array/section_array"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="30dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pilih_seat"
+                        android:textSize="18sp"
+                        android:layout_gravity="start"
+                        android:textColor="@color/white"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="@color/white">
+
+                        <Spinner
+                            android:id="@+id/spinnerSeatNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/seat_array"
+                            android:spinnerMode="dropdown" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fieldWaktu"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Credit Card"
-                android:id="@+id/rbCreditCard"/>
-            <RadioButton
-                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/line2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pilih_waktu"
+                    android:textSize="18sp"
+                    android:layout_gravity="start"
+                    android:textColor="@color/white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/white">
+
+                    <Spinner
+                        android:id="@+id/spinnerTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/time_array"
+                        android:spinnerMode="dropdown"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/fieldWaktu"
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="Debit Card"
-                android:id="@+id/rbDebitCard"/>
-            <RadioButton
-                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                app:cardBackgroundColor="@color/putihCustom">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#D3C5C5">
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tanggal"
+                        android:textSize="16sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/harga"
+                        android:textSize="16sp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="20dp"
+                        android:textColor="@color/black"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvPaymentMethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/metode_pembayaran"
+                    android:textSize="16sp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/virtual_account"
+                        android:id="@+id/rbVirtualAccount"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/credit_card"
+                        android:id="@+id/rbCreditCard"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/debit_card"
+                        android:id="@+id/rbDebitCard" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/e_wallet"
+                        android:id="@+id/rbEWallet"/>
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/card2"
                 android:layout_marginStart="20dp"
-                android:text="E-Wallet"
-                android:id="@+id/rbEWallet"/>
-        </RadioGroup>
-    </androidx.cardview.widget.CardView>
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/card2"
-        android:layout_marginTop="20dp"
-        app:cornerRadius="120dp"
-        app:backgroundTint="@color/putihCustom"
-        android:text="Pesan"
-        android:textColor="@color/backgroundColor"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
-</RelativeLayout>
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/pesan"
+                android:textColor="@color/backgroundColor"
+                app:backgroundTint="@color/putihCustom"
+                app:cornerRadius="120dp" />
+        </RelativeLayout>
+    </ScrollView>
 </layout>

@@ -43,10 +43,10 @@
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="240dp"
+            android:layout_below="@id/header"
             mapbox:mapbox_cameraTargetLat="40.73581"
             mapbox:mapbox_cameraTargetLng="-73.99155"
-            mapbox:mapbox_cameraZoom="11"
-            android:layout_below="@id/header"/>
+            mapbox:mapbox_cameraZoom="22" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
