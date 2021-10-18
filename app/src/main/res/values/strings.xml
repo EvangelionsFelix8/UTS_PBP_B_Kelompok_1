@@ -51,6 +51,8 @@
     <string name="tiket_hanya_berlaku_untuk_satu_orang">Tiket hanya berlaku untuk satu orang</string>
     <string name="your_order">YOUR ORDER</string>
     <string name="ketentuan">Ketentuan:</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
     <string-array name="section_array">
         <item>VVIP</item>
         <item>VIP</item>

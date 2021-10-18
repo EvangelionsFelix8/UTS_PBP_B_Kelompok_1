@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,7 +50,12 @@ public class FragmentProfile extends Fragment {
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+//                FragmentManager fragmentManager = R.layout.fragment_profile_edit;
+//                FragmentTransaction fragmentTransaction = new
+//                getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(R.id.layout_fragment, fragment)
+//                .commit();
             }
         });
 
@@ -86,4 +93,11 @@ public class FragmentProfile extends Fragment {
             Toast.makeText(getContext(), "Heyy Kamu Sudah Login !!", Toast.LENGTH_SHORT).show();
         }
     }
+
+//    public void changeFragment(Fragment fragment) {
+//        getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(R.id.layout_fragment, fragment)
+//                .commit();
+//    }
 }
