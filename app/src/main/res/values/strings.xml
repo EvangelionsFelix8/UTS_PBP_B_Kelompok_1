@@ -69,4 +69,10 @@
         <item>29</item>
         <item>30</item>
     </string-array>
+    <string-array name="time_array">
+        <item>09.00 WIB</item>
+        <item>13.00 WIB</item>
+        <item>17.00 WIB</item>
+        <item>19.00 WIB</item>
+    </string-array>
 </resources>
