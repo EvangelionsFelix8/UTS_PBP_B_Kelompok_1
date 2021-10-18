@@ -23,8 +23,19 @@ public class TicketRoom {
         @ColumnInfo(name = "event_time")
         private String time;
 
+        public String getEventAddress() {
+                return eventAddress;
+        }
+
+        public void setEventAddress(String eventAddress) {
+                this.eventAddress = eventAddress;
+        }
+
         @ColumnInfo(name = "event_venue")
         private String eventVenue;
+
+        @ColumnInfo(name = "event_alamat")
+        private String eventAddress;
 
         @ColumnInfo(name = "seat_section")
         private String seatSection;

@@ -1,6 +1,7 @@
 package com.example.uts_pbp_b_kelompok_1;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -69,8 +70,15 @@ public class DetailEventActivity extends AppCompatActivity implements OnMapReady
         btnPesanTiket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DetailEventActivity.this, OrderActivity.class);;
-                startActivity(intent);
+               // Intent intent = new Intent(DetailEventActivity.this, OrderActivity.class);;
+                //startActivity(intent);
+                Intent DetailEvent = new Intent(DetailEventActivity.this, OrderActivity.class);
+                Gson gson = new Gson();
+                String strEvent = gson.toJson(event);
+
+//                Menyisipkan data json string ke intent
+                DetailEvent.putExtra("detailEvent", strEvent);
+                startActivity(DetailEvent);
             }
         });
     }
