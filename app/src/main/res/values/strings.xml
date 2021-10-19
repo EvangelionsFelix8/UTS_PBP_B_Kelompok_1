@@ -18,7 +18,7 @@
     <string name="welcome">Welcome,</string>
     <string name="username1">Username!</string>
     <string name="judulevent">Judul Event</string>
-    <string name="tanggalevent">Tanggal Event</string>
+    <string name="tanggal">Tanggal</string>
     <string name="venue">Venue:</string>
     <string name="address">Address:</string>
     <string name="nama_tempat">Nama Tempat</string>
@@ -42,7 +42,6 @@
     <string name="virtual_account">Virtual Account</string>
     <string name="metode_pembayaran">Metode Pembayaran</string>
     <string name="harga">Harga</string>
-    <string name="tanggal">Tanggal</string>
     <string name="pilih_seat">Pilih Seat</string>
     <string name="pilih_section">Pilih Section</string>
     <string name="pilih_waktu">Pilih Waktu</string>
@@ -53,6 +52,10 @@
     <string name="ketentuan">Ketentuan:</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
+    <string name="kode_booking">Kode Booking</string>
+    <string name="nama_event">Nama Event</string>
+    <string name="jenis_event">Jenis Event</string>
+    <string name="nama_pemilik_tiket">Nama Pemilik Tiket</string>
     <string-array name="section_array">
         <item>VVIP</item>
         <item>VIP</item>
