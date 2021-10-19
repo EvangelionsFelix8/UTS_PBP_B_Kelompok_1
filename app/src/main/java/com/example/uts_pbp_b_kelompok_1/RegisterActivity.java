@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -44,12 +45,40 @@ public class RegisterActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+        String nama = textNama.getEditText().getText().toString();
+        String email = textEmail.getEditText().getText().toString();
+        String username = textUsername.getEditText().getText().toString();
+        String password = textPassword.getEditText().getText().toString();
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                register(textNama.getEditText().getText().toString(), textUsername.getEditText().getText().toString().trim(), textPassword.getEditText().getText().toString().trim());
-                Toast.makeText(RegisterActivity.this, "Berhasil Register Akun !", Toast.LENGTH_LONG).show();
+                boolean checkLogin = false;
+                if(TextUtils.isEmpty(nama)){
+                    textNama.setError("Nama must be filled with text");
+                    checkLogin = false;
+                }
+                if(TextUtils.isEmpty(email)){
+                    textEmail.setError("Email must be filled with text");
+                    checkLogin = false;
+                }
+                if(TextUtils.isEmpty(username)){
+                    textUsername.setError("Username must be filled with text");
+                    checkLogin = false;
+                }
+                if(TextUtils.isEmpty(password)){
+                    textPassword.setError("Password must be filled with text");
+                    checkLogin = false;
+                }
+                if(!TextUtils.isEmpty(nama) && !TextUtils.isEmpty(email) &&!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)){
+                    checkLogin= true;
+                }
+                if(!checkLogin){
+                    return;
+                }else
+                    register(textNama.getEditText().getText().toString(), textUsername.getEditText().getText().toString().trim(), textPassword.getEditText().getText().toString().trim());
+                    Toast.makeText(RegisterActivity.this, "Berhasil Register Akun !", Toast.LENGTH_LONG).show();
+
             }
         });
     }
