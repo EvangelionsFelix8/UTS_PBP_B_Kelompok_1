@@ -21,6 +21,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    configurations {
+        all*.exclude group:'com.amazonaws'
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -35,7 +38,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
 
     //implementation fileTree(dir: 'libs', include: ['*.jar'])
-     //implementation files('libs/gson-2.8.5.jar', 'libs/gson-2.8.5-javadoc.jar', 'libs/gson-2.8.5-javadoc.jar')
+    //implementation files('libs/gson-2.8.5.jar', 'libs/gson-2.8.5-javadoc.jar', 'libs/gson-2.8.5-sources.jar')
     def room_version = "2.3.0" //Room Version
     
     implementation "androidx.room:room-runtime:$room_version"
@@ -64,6 +67,19 @@ dependencies {
 
     //     Mapbox
     implementation('com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.1'){
+        exclude module:'gson'
+    }
+    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.0'){
+        exclude module:'gson'
+    }
+    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0'){
+        exclude module:'gson'
+    }
+    implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation:0.13.0'){
+        exclude module:'gson'
+    }
+    implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.13.0'){
+        transitive = true
         exclude module:'gson'
     }
 }
