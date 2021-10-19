@@ -69,18 +69,25 @@ dependencies {
     implementation('com.mapbox.mapboxsdk:mapbox-android-sdk:9.2.1'){
         exclude module:'gson'
     }
-    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.0'){
-        exclude module:'gson'
-    }
-    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0'){
-        exclude module:'gson'
-    }
+
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-telemetry:6.1.0'
+
+//    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.5.0'){
+//        exclude module:'gson'
+//    }
+
+//    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0'){
+//        exclude module:'gson'
+//    }
+//
     implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation:0.13.0'){
         exclude module:'gson'
     }
+
+//    implementation ('com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0')
+//    implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation:0.13.0')
     implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.13.0'){
         transitive = true
         exclude module:'gson'
     }
-
 }
