@@ -24,5 +24,10 @@ public interface UserDao {
     void insertUser(User user);
 
     @Update
-    void updateTicket(TicketRoom ticket);
+    void updateUser(User user);
+
+    @Query("UPDATE users SET full_name = :fullName, username=:username, email=:email, alamat=:alamat WHERE id_user = :iduser")
+    void updateUser(String fullName, String username, String email, String alamat, int iduser);
+
+
 }

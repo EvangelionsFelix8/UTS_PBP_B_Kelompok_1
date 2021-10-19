@@ -62,7 +62,7 @@ public class OrderActivity extends AppCompatActivity {
 
     }
 
-    private void insertTicket(){
+    public void insertTicket(){
         final String eventName = event.getNamaEvent();
         final String eventDate = event.getTanggalEvent();
         final String eventVenue = event.getVenueEvent();

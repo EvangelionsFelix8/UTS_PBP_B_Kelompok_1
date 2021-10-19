@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragment_profile_edit"
     tools:context=".FragmentProfile"
     android:background="@color/backgroundColor">
 
@@ -72,7 +73,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvNama"
+                            android:id="@+id/tvNamaEdit"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -110,7 +111,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvUsername"
+                            android:id="@+id/tvUsernameEdit"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -148,7 +149,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvEmail"
+                            android:id="@+id/tvEmailEdit"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -186,7 +187,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/tvAlamat"
+                            android:id="@+id/tvAlamatEdit"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

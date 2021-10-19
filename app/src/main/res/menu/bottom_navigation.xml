@@ -10,12 +10,6 @@
         android:icon="@drawable/ic_baseline_home_24"/>
 
     <item
-        android:id="@+id/menuTransaksi"
-        android:enabled="true"
-        android:title="@string/transaksi"
-        android:icon="@drawable/transaksi_logo"/>
-
-    <item
         android:id="@+id/menuRiwayat"
         android:enabled="true"
         android:title="@string/riwayat"

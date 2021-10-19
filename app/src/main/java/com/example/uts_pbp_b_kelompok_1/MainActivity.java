@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             if (item.getItemId() == R.id.menuHome) {
                 changeFragment(new FragmentHome());
-            } else if (item.getItemId() == R.id.menuTransaksi) {
-//                changeFragment(new TodoListFragment());
             } else if (item.getItemId() == R.id.menuRiwayat) {
                 changeFragment(new FragmentRiwayat());
             } else if (item.getItemId() == R.id.menuProfile) {
@@ -45,4 +43,5 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.layout_fragment, fragment)
                 .commit();
     }
+
 }
