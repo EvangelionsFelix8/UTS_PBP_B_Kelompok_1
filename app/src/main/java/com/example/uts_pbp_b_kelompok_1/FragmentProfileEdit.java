@@ -18,12 +18,17 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.uts_pbp_b_kelompok_1.Model.User;
+import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
+
 public class FragmentProfileEdit extends Fragment {
 
     private ImageButton btnEditNama, btnEditUsername, btnEditEmail, btnEditAlamat;
     private Button btnCancel, btnConfirm, btnUpdate;
     private TextView tvNama, tvUsername, tvEmail, tvAlamat;
     private EditText textEdit;
+    private UserPreferences userPreferences;
+    private User user;
 
     public FragmentProfileEdit() {
         // Required empty public constructor
@@ -51,6 +56,14 @@ public class FragmentProfileEdit extends Fragment {
         tvEmail = view.findViewById(R.id.tvEmail);
         tvAlamat = view.findViewById(R.id.tvAlamat);
 
+        userPreferences = new UserPreferences(this.getContext());
+        user = userPreferences.getUserLogin();
+
+        tvNama.setText(user.getFullName());
+        tvUsername.setText(user.getUsername());
+        tvEmail.setText(user.getEmail());
+        tvAlamat.setText(user.getAlamat());
+
         btnEditNama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,6 +83,7 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        tvNama.setText(textEdit.getText().toString());
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -96,6 +110,7 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        tvUsername.setText(textEdit.getText().toString());
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -122,6 +137,7 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        tvEmail.setText(textEdit.getText().toString());
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -148,6 +164,7 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        tvAlamat.setText(textEdit.getText().toString());
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -172,9 +189,7 @@ public class FragmentProfileEdit extends Fragment {
     }
 
     public void onBackPressed() {
-
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.popBackStack();
-
     }
 }

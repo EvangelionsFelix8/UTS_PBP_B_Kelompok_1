@@ -73,7 +73,6 @@
 
                         <TextView
                             android:id="@+id/tvNama"
-                            android:text="Nama Kelompok kita"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -112,7 +111,6 @@
 
                         <TextView
                             android:id="@+id/tvUsername"
-                            android:text="Nama Kita"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -151,7 +149,6 @@
 
                         <TextView
                             android:id="@+id/tvEmail"
-                            android:text="namakita@gmail.com"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -190,7 +187,6 @@
 
                         <TextView
                             android:id="@+id/tvAlamat"
-                            android:text="Surakarta - Sukoharjo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

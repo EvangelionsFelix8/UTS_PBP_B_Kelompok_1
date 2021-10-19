@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.uts_pbp_b_kelompok_1.Model.User;
@@ -25,6 +26,8 @@ public class FragmentProfile extends Fragment {
 
     private ImageButton btnSetting;
     private Button btnLogout;
+    private TextView textNama, textUsername, textEmail, textAlamat;
+    private User user;
     private UserPreferences userPreferences;
 
     public FragmentProfile() {
@@ -42,10 +45,20 @@ public class FragmentProfile extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        textNama = view.findViewById(R.id.tvNama);
+        textUsername = view.findViewById(R.id.tvUsername);
+        textEmail = view.findViewById(R.id.tvEmail);
+        textAlamat = view.findViewById(R.id.tvAlamat);
         btnLogout = view.findViewById(R.id.btnLogout);
         btnSetting = view.findViewById(R.id.btnSetting);
 
         userPreferences = new UserPreferences(this.getContext());
+        user = userPreferences.getUserLogin();
+
+        textNama.setText(user.getFullName());
+        textUsername.setText(user.getUsername());
+        textEmail.setText(user.getEmail());
+        textAlamat.setText(user.getAlamat());
 
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +96,7 @@ public class FragmentProfile extends Fragment {
             }
         });
     }
+
     private void checkLogin() {
 //        Fungsi ini akan mengecek jika user login,
 //        akan memunculkan toast jika tidak redirect ke login activity

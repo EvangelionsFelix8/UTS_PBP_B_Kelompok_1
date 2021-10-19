@@ -1,6 +1,6 @@
 package com.example.uts_pbp_b_kelompok_1;
 
-import static com.mapbox.core.constants.Constants.PRECISION_6;
+//import static com.mapbox.core.constants.Constants.PRECISION_6;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconAllowOverlap;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconIgnorePlacement;
 import static com.mapbox.mapboxsdk.style.layers.PropertyFactory.iconImage;
@@ -27,10 +27,10 @@ import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
 import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
-import com.mapbox.api.directions.v5.DirectionsCriteria;
-import com.mapbox.api.directions.v5.MapboxDirections;
-import com.mapbox.api.directions.v5.models.DirectionsResponse;
-import com.mapbox.api.directions.v5.models.DirectionsRoute;
+//import com.mapbox.api.directions.v5.DirectionsCriteria;
+//import com.mapbox.api.directions.v5.MapboxDirections;
+//import com.mapbox.api.directions.v5.models.DirectionsResponse;
+//import com.mapbox.api.directions.v5.models.DirectionsRoute;
 import com.mapbox.geojson.Feature;
 import com.mapbox.geojson.FeatureCollection;
 import com.mapbox.geojson.LineString;
@@ -57,7 +57,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import timber.log.Timber;
+//import timber.log.Timber;
 
 public class DetailEventActivity extends AppCompatActivity implements OnMapReadyCallback, PermissionsListener {
 
@@ -70,13 +70,14 @@ public class DetailEventActivity extends AppCompatActivity implements OnMapReady
     private Point origin;
     private Point destination;
     private LatLng point;
-    private MapboxDirections client;
+
+//    private MapboxDirections client;
     private static final String ROUTE_LAYER_ID = "route-layer-id";
     private static final String ROUTE_SOURCE_ID = "route-source-id";
     private static final String ICON_LAYER_ID = "icon-layer-id";
     private static final String ICON_SOURCE_ID = "icon-source-id";
     private static final String RED_PIN_ICON_ID = "red-pin-icon-id";
-    private DirectionsRoute currentRoute;
+//    private DirectionsRoute currentRoute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
