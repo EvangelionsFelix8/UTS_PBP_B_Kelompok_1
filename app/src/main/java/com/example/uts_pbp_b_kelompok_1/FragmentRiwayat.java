@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import com.example.uts_pbp_b_kelompok_1.Adapter.RiwayatAdapter;
 import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Entity.TicketRoom;
-import com.example.uts_pbp_b_kelompok_1.Entity.UserRoom;
+import com.example.uts_pbp_b_kelompok_1.Model.User;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 
 import java.util.ArrayList;

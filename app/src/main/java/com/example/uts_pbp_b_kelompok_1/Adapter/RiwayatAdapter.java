@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uts_pbp_b_kelompok_1.Entity.TicketRoom;
-import com.example.uts_pbp_b_kelompok_1.Entity.UserRoom;
+import com.example.uts_pbp_b_kelompok_1.Model.User;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 import com.example.uts_pbp_b_kelompok_1.R;
 

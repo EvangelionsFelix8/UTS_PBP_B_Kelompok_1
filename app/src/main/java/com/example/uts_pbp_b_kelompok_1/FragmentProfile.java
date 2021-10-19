@@ -50,12 +50,12 @@ public class FragmentProfile extends Fragment {
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                FragmentManager fragmentManager = R.layout.fragment_profile_edit;
-//                FragmentTransaction fragmentTransaction = new
-//                getSupportFragmentManager()
-//                .beginTransaction()
-//                .replace(R.id.layout_fragment, fragment)
-//                .commit();
+                Fragment fragment = new FragmentProfileEdit();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.layout_fragment, fragment);
+                        fragmentTransaction.addToBackStack(null);
+                        fragmentTransaction.commit();
             }
         });
 

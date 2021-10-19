@@ -5,7 +5,9 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "ticket", foreignKeys = {@ForeignKey(entity = UserRoom.class, parentColumns = "id_user", childColumns = "id_user", onDelete = ForeignKey.CASCADE)})
+import com.example.uts_pbp_b_kelompok_1.Model.User;
+
+@Entity(tableName = "ticket", foreignKeys = {@ForeignKey(entity = User.class, parentColumns = "id_user", childColumns = "id_user", onDelete = ForeignKey.CASCADE)})
 public class TicketRoom {
         @PrimaryKey(autoGenerate = true)
         @ColumnInfo(name = "kode_tiket")

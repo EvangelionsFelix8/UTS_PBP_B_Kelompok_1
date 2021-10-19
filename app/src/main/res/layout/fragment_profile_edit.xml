@@ -72,6 +72,8 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvNama"
+                            android:text="Nama Kelompok kita"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -109,6 +111,8 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvUsername"
+                            android:text="Nama Kita"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -146,6 +150,8 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvEmail"
+                            android:text="namakita@gmail.com"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -183,6 +189,8 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tvAlamat"
+                            android:text="Surakarta - Sukoharjo"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -205,6 +213,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/btnCancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -214,6 +223,7 @@
                     android:layout_marginEnd="100dp"/>
 
                 <Button
+                    android:id="@+id/btnConfirm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
