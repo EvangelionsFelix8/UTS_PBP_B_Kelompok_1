@@ -2,16 +2,7 @@ package com.example.uts_pbp_b_kelompok_1;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +11,19 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.example.uts_pbp_b_kelompok_1.Model.User;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 
 public class FragmentProfile extends Fragment {
 
     private ImageButton btnSetting;
-    private ImageButton btnRefresh;
     private Button btnLogout;
     private TextView textNama, textUsername, textEmail, textAlamat;
     private User user;
@@ -53,7 +50,6 @@ public class FragmentProfile extends Fragment {
         textAlamat = view.findViewById(R.id.tvAlamat);
         btnLogout = view.findViewById(R.id.btnLogout);
         btnSetting = view.findViewById(R.id.btnSetting);
-        btnRefresh = view.findViewById(R.id.btnRefresh);
 
         userPreferences = new UserPreferences(this.getContext());
         user = userPreferences.getUserLogin();
@@ -62,25 +58,6 @@ public class FragmentProfile extends Fragment {
         textUsername.setText(user.getUsername());
         textEmail.setText(user.getEmail());
         textAlamat.setText(user.getAlamat());
-
-        btnRefresh.setOnClickListener(new View.OnClickListener() {
-            //btnRefresh ni buat fragment e bisa keupdate tampilan data baru
-            @Override
-            public void onClick(View view) {
-                /*Fragment fragment = null;
-                fragment = getFragmentManager().findFragmentByTag();
-                final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.detach(fragment);
-                ft.attach(fragment);
-                ft.commit(); */
-                /*Fragment fragment = new FragmentProfile();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit(); */
-            }
-        });
 
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override

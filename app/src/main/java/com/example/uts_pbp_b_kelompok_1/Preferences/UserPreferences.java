@@ -27,7 +27,7 @@ public class UserPreferences {
         editor = sharedPreferences.edit();
     }
 
-    public void setLogin(int iduser,String name, String username, String password, String alamat, String image){
+    public void setLogin(int iduser, String name, String username, String password, String alamat, String image){
 //        Menyimpan data login ke sharedPreferences dengan key
         editor.putBoolean(IS_LOGIN, true);
         editor.putInt(KEY_ID, iduser);
@@ -54,7 +54,7 @@ public class UserPreferences {
         alamat = sharedPreferences.getString(KEY_ALAMAT, null);
 //        image = sharedPreferences.(KEY_IMAGE, null);
 
-        return new User(id, username, password, name, email, alamat);
+        return new User(id, name, username, password, email, alamat);
     }
 
     public boolean checkLogin(){

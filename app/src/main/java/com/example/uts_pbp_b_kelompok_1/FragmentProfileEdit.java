@@ -2,15 +2,6 @@ package com.example.uts_pbp_b_kelompok_1;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +10,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Model.User;
@@ -87,13 +84,13 @@ public class FragmentProfileEdit extends Fragment {
                     @Override
                     public void onClick(View view) {
                         String editFullName = textEdit.getText().toString();
-                        String editUsername = user.getUsername();
-                        String editEmail = user.getEmail();
-                        String editAlamat = user.getAlamat();
+//                        String editUsername = user.getUsername();
+//                        String editEmail = user.getEmail();
+//                        String editAlamat = user.getAlamat();
                         tvNama.setText(editFullName);
-                        int idUser = user.getIduser();
-                        user.setFullName(editFullName);
-                        updateUser(editFullName, editUsername, editEmail, editAlamat, idUser);
+//                        int idUser = user.getIduser();
+//                        user.setFullName(editFullName);
+//                        updateUser(user);
                         Toast.makeText(getContext(), "Berhasil update nama menjadi "+editFullName, Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -128,7 +125,7 @@ public class FragmentProfileEdit extends Fragment {
                         tvUsername.setText(editUsername);
                         int idUser = user.getIduser();
                         user.setUsername(editUsername);
-                        updateUser(editFullName, editUsername, editEmail, editAlamat, idUser);
+//                        updateUser(user);
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -163,7 +160,7 @@ public class FragmentProfileEdit extends Fragment {
                         tvEmail.setText(editEmail);
                         int idUser = user.getIduser();
                         user.setEmail(editEmail);
-                        updateUser(editFullName, editUsername, editEmail, editAlamat, idUser);
+//                        updateUser(user);
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -198,7 +195,7 @@ public class FragmentProfileEdit extends Fragment {
                         tvAlamat.setText(editAlamat);
                         int idUser = user.getIduser();
                         user.setAlamat(editAlamat);
-                        updateUser(editFullName, editUsername, editEmail, editAlamat, idUser);
+//                        updateUser(user);
                         Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
@@ -216,6 +213,7 @@ public class FragmentProfileEdit extends Fragment {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 //Toast.makeText(getContext(), "Berhasil Edit Profile!", Toast.LENGTH_SHORT).show();
                 onBackPressed();
             }
@@ -228,15 +226,16 @@ public class FragmentProfileEdit extends Fragment {
     }
 
 
-    public void updateUser(String fullName, String username, String email, String alamat, int id){
-        class UpdateUser extends AsyncTask<Void, Void,Void>{
+    public void updateUser(User user){
+        class UpdateUser extends AsyncTask<Void, Void,Void> {
 
             @Override
             protected Void doInBackground(Void... voids) {
+
                 Database.getInstance(getContext())
                         .getDatabase()
                         .userDao()
-                        .updateUser(fullName, username, email, alamat, id);
+                        .updateUser(user);
                 return null;
             }
             @Override
