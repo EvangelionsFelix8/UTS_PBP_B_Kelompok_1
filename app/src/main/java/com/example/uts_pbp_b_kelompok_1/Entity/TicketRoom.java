@@ -43,6 +43,9 @@ public class TicketRoom {
         @ColumnInfo(name = "seat_number")
         private String seatNumber;
 
+        @ColumnInfo(name = "nama_pemilik")
+        private String namaPemilik;
+
         public int getKodeticket() {
                 return kodeticket;
         }
@@ -105,5 +108,13 @@ public class TicketRoom {
 
         public void setSeatNumber(String seatNumber) {
                 this.seatNumber = seatNumber;
+        }
+
+        public String getNamaPemilik() {
+                return namaPemilik;
+        }
+
+        public void setNamaPemilik(String namaPemilik) {
+                this.namaPemilik = namaPemilik;
         }
 }

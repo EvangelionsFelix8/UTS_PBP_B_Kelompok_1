@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.menuTransaksi) {
 //                changeFragment(new TodoListFragment());
             } else if (item.getItemId() == R.id.menuRiwayat) {
-//                changeFragment(new TodoListFragment());
+                changeFragment(new FragmentRiwayat());
             } else if (item.getItemId() == R.id.menuProfile) {
                 changeFragment(new FragmentProfile());
             }
