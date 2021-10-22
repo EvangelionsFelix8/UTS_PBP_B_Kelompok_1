@@ -52,6 +52,10 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
             cardView = itemView.findViewById(R.id.card_view);
 //            ivLogoEvent = itemView.findViewById(R.id.ivLogoEvent);
         }
+
+        public void setData(String ticket, int position){
+            tvKodeBooking.setText(ticket);
+        }
     }
 
     @NonNull
@@ -64,21 +68,18 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         TicketRoom ticket = ticketList.get(position);
-        holder.tvKodeBooking.setText("1");
-        holder.tvTanggal.setText("1 Januari 2022");
-        holder.tvNamaEvent.setText("Konser Rock Halal");
-        holder.tvVenue.setText("Mojosongo");
-        holder.tvNamaPemilik.setText("Ravelino");
+        //holder.tvKodeBooking.setText("1");
+        //holder.tvTanggal.setText("1 Januari 2022");
+        //holder.tvNamaEvent.setText("Konser Rock Halal");
+        //holder.tvVenue.setText("Mojosongo");
+        //holder.tvNamaPemilik.setText("Ravelino");
 
-
-
-//        holder.tvKodeBooking.setText(ticket.getKodeticket());
-//        holder.tvTanggal.setText(ticket.getEventDate());
-//        holder.tvNamaEvent.setText(ticket.getEventName());
-//        holder.tvVenue.setText(ticket.getEventVenue());
-//        holder.tvNamaPemilik.setText(ticket.getNamaPemilik());
-//        holder.ivLogoEvent.setText(ticket.getKodeticket());
-        database = Database.getInstance(context);
+        holder.tvKodeBooking.setText(Integer.toString(ticket.getKodeticket()));
+       holder.tvTanggal.setText(ticket.getEventDate());
+        holder.tvNamaEvent.setText(ticket.getEventName());
+        holder.tvVenue.setText(ticket.getEventVenue());
+        holder.tvNamaPemilik.setText(ticket.getNamaPemilik());
+       // database = Database.getInstance(context); seng ini ga perlu lix
 //
 //        holder.cardView.setOnClickListener(new View.OnClickListener() {
 //            @Override
