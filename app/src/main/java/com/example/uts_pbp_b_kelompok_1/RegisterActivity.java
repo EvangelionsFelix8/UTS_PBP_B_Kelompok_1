@@ -64,14 +64,14 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    register(textNama.getEditText().getText().toString(), textUsername.getEditText().getText().toString().trim(), textPassword.getEditText().getText().toString().trim());
+                    register(textNama.getEditText().getText().toString(),textEmail.getEditText().getText().toString().trim(), textUsername.getEditText().getText().toString().trim(), textPassword.getEditText().getText().toString().trim());
                     Toast.makeText(RegisterActivity.this, "Berhasil Register Akun !", Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
 
-    private void register(String name,String username, String password){
+    private void register(String name, String email, String username, String password){
 
         class RegisterUser extends AsyncTask<Void, Void, Void> {
 
@@ -79,6 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
             protected Void doInBackground(Void... voids) {
                 User user = new User();
                 user.setFullName(name);
+                user.setEmail(email);
                 user.setUsername(username);
                 user.setPassword(password);
 

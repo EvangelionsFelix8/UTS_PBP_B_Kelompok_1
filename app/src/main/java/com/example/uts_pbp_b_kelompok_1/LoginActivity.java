@@ -1,15 +1,14 @@
 package com.example.uts_pbp_b_kelompok_1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Model.User;
@@ -75,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Username atau password salah", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(LoginActivity.this, "Berhasil login", Toast.LENGTH_SHORT).show();
-                    userPreferences.setLogin(user.getIduser(),user.getFullName(), user.getUsername(),user.getPassword(), user.getAlamat(), String.valueOf(user.getProfilePicture()));
+                    userPreferences.setLogin(user.getIduser(),user.getFullName(),user.getEmail(), user.getUsername(),user.getPassword(), user.getAlamat(), String.valueOf(user.getProfilePicture()));
                 }
                 checkLogin();
 

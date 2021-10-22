@@ -1,7 +1,6 @@
 package com.example.uts_pbp_b_kelompok_1.Adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,11 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Entity.TicketRoom;
-import com.example.uts_pbp_b_kelompok_1.Model.User;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 import com.example.uts_pbp_b_kelompok_1.R;
 
@@ -23,30 +22,35 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
 
     private List<TicketRoom> ticketList;
     private Context context;
+    private Database database;
+    private UserPreferences userPreferences;
 
     public RiwayatAdapter(List<TicketRoom> ticketList, Context context)
     {
         this.ticketList = ticketList;
         this.context = context;
+        this.userPreferences = new UserPreferences(context);
         notifyDataSetChanged();
     }
 
     public class viewHolder extends RecyclerView.ViewHolder{
-        TextView tvKodeBooking;
-        TextView tvTanggal;
-        TextView tvNamaEvent;
-        TextView tvVenue;
-        TextView tvNamaPemilik;
-        ImageView ivLogoEvent;
+        private TextView tvKodeBooking;
+        private TextView tvTanggal;
+        private TextView tvNamaEvent;
+        private TextView tvVenue;
+        private TextView tvNamaPemilik;
+        private ImageView ivLogoEvent;
+        private CardView cardView;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             tvKodeBooking = itemView.findViewById(R.id.tvKodeBooking);
             tvTanggal = itemView.findViewById(R.id.tvTanggal);
             tvNamaEvent = itemView.findViewById(R.id.tvNamaEventRiwayat);
-            tvVenue = itemView.findViewById(R.id.tvVenue);
+            tvVenue = itemView.findViewById(R.id.tvVenueRiwayat);
             tvNamaPemilik = itemView.findViewById(R.id.tvNamaPemilik);
-            ivLogoEvent = itemView.findViewById(R.id.ivLogoEvent);
+            cardView = itemView.findViewById(R.id.card_view);
+//            ivLogoEvent = itemView.findViewById(R.id.ivLogoEvent);
         }
     }
 
@@ -60,25 +64,38 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         TicketRoom ticket = ticketList.get(position);
-        holder.tvKodeBooking.setText(ticket.getKodeticket());
-        holder.tvTanggal.setText(ticket.getEventDate());
-        holder.tvNamaEvent.setText(ticket.getEventName());
-        holder.tvVenue.setText(ticket.getEventVenue());
-        holder.tvNamaPemilik.setText(ticket.getNamaPemilik());
+        holder.tvKodeBooking.setText("1");
+        holder.tvTanggal.setText("1 Januari 2022");
+        holder.tvNamaEvent.setText("Konser Rock Halal");
+        holder.tvVenue.setText("Mojosongo");
+        holder.tvNamaPemilik.setText("Ravelino");
+
+
+
+//        holder.tvKodeBooking.setText(ticket.getKodeticket());
+//        holder.tvTanggal.setText(ticket.getEventDate());
+//        holder.tvNamaEvent.setText(ticket.getEventName());
+//        holder.tvVenue.setText(ticket.getEventVenue());
+//        holder.tvNamaPemilik.setText(ticket.getNamaPemilik());
 //        holder.ivLogoEvent.setText(ticket.getKodeticket());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View itemView) {
-
-            }
-        });
+        database = Database.getInstance(context);
+//
+//        holder.cardView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
+////        holder.itemView.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View itemView) {
+////
+////            }
+////        });
     }
 
     @Override
     public int getItemCount() {
         return ticketList.size();
     }
-
-
 }

@@ -16,11 +16,14 @@ public interface TicketDao {
     List<TicketRoom> getAll();
 
     @Insert
-    void insertTicket(TicketRoom ticket);
+    void insertTicket(TicketRoom ticketRoom);
 
     @Update
-    void updateTicket(TicketRoom ticket);
+    void updateTicket(TicketRoom ticketRoom);
 
     @Delete
-    void deleteTicket(TicketRoom ticket);
+    void deleteTicket(TicketRoom ticketRoom);
+
+    @Query("SELECT * FROM ticket where id_user = :user_id")
+    List<TicketRoom> getTodosByUserId(int user_id);
 }

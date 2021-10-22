@@ -2,19 +2,17 @@ package com.example.uts_pbp_b_kelompok_1;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.uts_pbp_b_kelompok_1.Adapter.RiwayatAdapter;
 import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Entity.TicketRoom;
-import com.example.uts_pbp_b_kelompok_1.Model.User;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 
 import java.util.ArrayList;
@@ -23,9 +21,7 @@ import java.util.List;
 public class FragmentRiwayat extends Fragment {
 
     private RecyclerView rvRiwayat;
-
     private UserPreferences userPreferences;
-
     private List<TicketRoom> ticketList;
     private RiwayatAdapter riwayatAdapter;
 
@@ -39,13 +35,13 @@ public class FragmentRiwayat extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_riwayat, container, false);
         rvRiwayat = root.findViewById(R.id.rvRiwayat);
-
+//
         userPreferences = new UserPreferences(getContext());
-
+//
         rvRiwayat.setLayoutManager(new LinearLayoutManager(getContext()));
-
+//
         getTickets();
-
+//
         ticketList = new ArrayList<>();
 
         return root;
@@ -60,7 +56,7 @@ public class FragmentRiwayat extends Fragment {
                 List<TicketRoom> ticketList = Database.getInstance(getContext())
                         .getDatabase()
                         .ticketDao()
-                        .getAll();
+                        .getTodosByUserId(userPreferences.getUserLogin().getIduser());
                 return ticketList;
             }
 

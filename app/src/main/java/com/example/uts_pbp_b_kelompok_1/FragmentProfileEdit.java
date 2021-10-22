@@ -83,15 +83,9 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        String editFullName = textEdit.getText().toString();
-//                        String editUsername = user.getUsername();
-//                        String editEmail = user.getEmail();
-//                        String editAlamat = user.getAlamat();
-                        tvNama.setText(editFullName);
-//                        int idUser = user.getIduser();
-//                        user.setFullName(editFullName);
-//                        updateUser(user);
-                        Toast.makeText(getContext(), "Berhasil update nama menjadi "+editFullName, Toast.LENGTH_SHORT).show();
+                        tvNama.setText(textEdit.getText().toString());
+                        user.setFullName(tvNama.getText().toString());
+                        Toast.makeText(getContext(), "Berhasil Update nama", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
                 });
@@ -117,16 +111,9 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //tvUsername.setText(textEdit.getText().toString());
-                        String editUsername = textEdit.getText().toString();
-                        String editFullName = user.getFullName();
-                        String editEmail = user.getEmail();
-                        String editAlamat = user.getAlamat();
-                        tvUsername.setText(editUsername);
-                        int idUser = user.getIduser();
-                        user.setUsername(editUsername);
-//                        updateUser(user);
-                        Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
+                        tvUsername.setText(textEdit.getText().toString());
+                        user.setUsername(tvUsername.getText().toString());
+                        Toast.makeText(getContext(), "Berhasil Update Username", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
                 });
@@ -152,16 +139,9 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //tvEmail.setText(textEdit.getText().toString());
-                        String editUsername = user.getUsername();
-                        String editFullName = user.getFullName();
-                        String editEmail = textEdit.getText().toString();
-                        String editAlamat = user.getAlamat();
-                        tvEmail.setText(editEmail);
-                        int idUser = user.getIduser();
-                        user.setEmail(editEmail);
-//                        updateUser(user);
-                        Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
+                        tvEmail.setText(textEdit.getText().toString());
+                        user.setEmail(tvEmail.getText().toString());
+                        Toast.makeText(getContext(), "Berhasil Update Email", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
                 });
@@ -187,16 +167,9 @@ public class FragmentProfileEdit extends Fragment {
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        //tvAlamat.setText(textEdit.getText().toString());
-                        String editUsername = user.getUsername();
-                        String editFullName = user.getFullName();
-                        String editEmail = user.getEmail();
-                        String editAlamat = textEdit.getText().toString();
-                        tvAlamat.setText(editAlamat);
-                        int idUser = user.getIduser();
-                        user.setAlamat(editAlamat);
-//                        updateUser(user);
-                        Toast.makeText(getContext(), "Berhasil Update Profile!", Toast.LENGTH_SHORT).show();
+                        tvAlamat.setText(textEdit.getText().toString());
+                        user.setAlamat(tvAlamat.getText().toString());
+                        Toast.makeText(getContext(), "Berhasil Update Alamat", Toast.LENGTH_SHORT).show();
                         popup.dismiss();
                     }
                 });
@@ -213,8 +186,8 @@ public class FragmentProfileEdit extends Fragment {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Toast.makeText(getContext(), "Berhasil Edit Profile!", Toast.LENGTH_SHORT).show();
+                updateUser(user);
+                Toast.makeText(getContext(), "Berhasil Edit Profile, silakan Logout !", Toast.LENGTH_LONG).show();
                 onBackPressed();
             }
         });
