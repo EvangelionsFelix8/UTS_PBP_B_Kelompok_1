@@ -54,18 +54,4 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.layout_fragment, fragment)
                 .commit();
     }
-    public void sendOnChannel1(View v){
-
-        Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.logotubes)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-                .setColor(Color.BLUE)
-                .setAutoCancel(true)
-                .setOnlyAlertOnce(true)
-                .setOnlyAlertOnce(true)
-                .build();
-
-        notificationManagerCompat.notify(1,notification);
-    }
 }
