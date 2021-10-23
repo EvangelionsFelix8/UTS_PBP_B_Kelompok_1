@@ -17,7 +17,7 @@ public class DummyEvent {
     public static final Event event1 = new Event(
             "5 Juni 2022",
             "Pentas Kebudayaan Solo",
-            "https://lh3.googleusercontent.com/proxy/CBofyF-mgUa1cNXqmh4yTLjL1RobPLhc2dl935GbM7mT1CsJulu5mgLMUznm7VpNceb6srrrNpD-BpYDGbrGY7kEQ-WTtejVV503jL4_v2_o7uD7hDEL",
+            "https://kabarapik.com/wp-content/uploads/2020/12/Pentas-Sendratari-Ramayana-di-Surakarta.jpg",
             "Graha Saba Buana",
             "Jalan Letjen Suprapto No.80-B, Sumber, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57137",
             50000.00);
@@ -38,7 +38,7 @@ public class DummyEvent {
     public static final Event event4 = new Event(
             "1 Januari 2022",
             "Pentas Seni Budaya",
-            "https://lh3.googleusercontent.com/proxy/g-0ngTRI-5IsH8zOk4hCDgO3N0HOMcJUBoOvhuMmhb2BzmREpuzZPbhQ32jjTUbqlr20xkf0eVUbbQWs8hgRjAi8eoqExJG4G2L_GlIJ6LRNP5MkVrEDr6hT7WuIw9KXwcBGdIADRwccwamqjW3cpz9DTEdLOlOuzmuQ3w5UFjJFdNAKUrMkYQ",
+            "https://surakarta.go.id/wp-content/uploads/2019/06/KOTA-KREATIF-1200x720.jpg",
             "Balai Kota Surakarta",
             "Jalan Jend. Sudirman No.2, Kp. Baru, Kec. Ps. Kliwon, Kota Surakarta, Jawa Tengah 57133",
             60000.00);

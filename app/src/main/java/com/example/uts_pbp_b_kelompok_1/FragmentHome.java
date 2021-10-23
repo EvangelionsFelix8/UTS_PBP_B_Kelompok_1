@@ -1,7 +1,6 @@
 package com.example.uts_pbp_b_kelompok_1;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,21 +13,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.uts_pbp_b_kelompok_1.Adapter.EventAdapter;
-import com.example.uts_pbp_b_kelompok_1.DetailEventActivity;
-import com.example.uts_pbp_b_kelompok_1.DummyEvent;
-import com.example.uts_pbp_b_kelompok_1.Event;
-import com.example.uts_pbp_b_kelompok_1.MainActivity;
 import com.example.uts_pbp_b_kelompok_1.Model.User;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
-import com.example.uts_pbp_b_kelompok_1.R;
 import com.example.uts_pbp_b_kelompok_1.databinding.FragmentHomeBinding;
-import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 

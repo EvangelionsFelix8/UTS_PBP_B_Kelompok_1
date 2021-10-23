@@ -34,19 +34,17 @@ public class FragmentRiwayat extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_riwayat, container, false);
+
         rvRiwayat = root.findViewById(R.id.rvRiwayat);
-//
         userPreferences = new UserPreferences(getContext());
-//
         rvRiwayat.setLayoutManager(new LinearLayoutManager(getContext()));
-//
         getTickets();
-//
         ticketList = new ArrayList<>();
 
         return root;
     }
 
+//    Get Data Tiket yang sudah dipesan oleh User
     private void getTickets()
     {
         class GetTickets extends AsyncTask<Void, Void, List<TicketRoom>>
