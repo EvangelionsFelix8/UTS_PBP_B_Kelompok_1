@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,7 +45,7 @@ public class FragmentRiwayat extends Fragment {
         return root;
     }
 
-//    Get Data Tiket yang sudah dipesan oleh User
+    //    Get Data Tiket yang sudah dipesan oleh User
     private void getTickets()
     {
         class GetTickets extends AsyncTask<Void, Void, List<TicketRoom>>
@@ -54,15 +55,26 @@ public class FragmentRiwayat extends Fragment {
                 List<TicketRoom> ticketList = Database.getInstance(getContext())
                         .getDatabase()
                         .ticketDao()
-                        .getTodosByUserId(userPreferences.getUserLogin().getIduser());
+                        .getTicketsByUserId(userPreferences.getUserLogin().getIduser());
                 return ticketList;
             }
 
             @Override
             protected void onPostExecute(List<TicketRoom> tickets) {
                 super.onPostExecute(tickets);
-                riwayatAdapter = new RiwayatAdapter(tickets, getContext());
-                rvRiwayat.setAdapter(riwayatAdapter);
+                if(tickets.size() > 0) {
+                    riwayatAdapter = new RiwayatAdapter(tickets, getContext());
+                    rvRiwayat.setAdapter(riwayatAdapter);
+                }
+                else
+                {
+                    Fragment frag = new FragmentRiwayatKosong();
+                    FragmentTransaction ft = getFragmentManager().beginTransaction();
+                    ft.replace(R.id.layout_fragment, frag);
+                    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                    ft.addToBackStack(null);
+                    ft.commit();
+                }
             }
         }
 

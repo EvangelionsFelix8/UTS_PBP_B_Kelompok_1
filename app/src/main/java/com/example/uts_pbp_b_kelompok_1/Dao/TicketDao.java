@@ -25,5 +25,5 @@ public interface TicketDao {
     void deleteTicket(TicketRoom ticketRoom);
 
     @Query("SELECT * FROM ticket where id_user = :user_id")
-    List<TicketRoom> getTodosByUserId(int user_id);
+    List<TicketRoom> getTicketsByUserId(int user_id);
 }

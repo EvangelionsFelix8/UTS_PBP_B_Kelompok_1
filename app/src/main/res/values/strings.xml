@@ -18,6 +18,7 @@
     <string name="welcome">Welcome,</string>
     <string name="username1">Username!</string>
     <string name="judulevent">Judul Event</string>
+    <string name="tanggalevent">Tanggal</string>
     <string name="tanggal">Tanggal</string>
     <string name="venue">Venue:</string>
     <string name="address">Address:</string>
@@ -59,7 +60,14 @@
     <string name="text">text</string>
     <string name="text_baru">text baru</string>
     <string name="update">Update</string>
-    <string name="tanggalevent">Tanggal Event</string>
+    <string name="empty_text1">Tiket kamu masih kosong..</string>
+    <string name="emptyText2">Yuk cek event-event menarik di sekitarmu!</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="your_ticket">YOUR TICKET</string>
+    <string name="section">Section</string>
+    <string name="seat_number">Seat Number</string>
+    <string name="tanggal_dan_waktu">Tanggal dan Waktu</string>
+    <string name="venue_tiket">Venue</string>
     <string-array name="section_array">
         <item>VVIP</item>
         <item>VIP</item>

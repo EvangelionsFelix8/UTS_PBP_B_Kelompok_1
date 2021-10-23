@@ -23,9 +23,10 @@
         <LinearLayout
             android:id="@+id/itemLeft"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingVertical="10dp">
 
             <TextView
                 android:id="@+id/tvKodeBooking"
@@ -50,11 +51,11 @@
         <LinearLayout
             android:id="@+id/itemRight"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:paddingVertical="12dp"
             android:layout_toEndOf="@id/itemLeft"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingVertical="10dp">
 
             <TextView
                 android:id="@+id/tvNamaEventRiwayat"
