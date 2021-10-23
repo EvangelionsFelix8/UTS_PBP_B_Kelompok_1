@@ -39,6 +39,8 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
 
+    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
     //implementation fileTree(dir: 'libs', include: ['*.jar'])
     //implementation files('libs/gson-2.8.5.jar', 'libs/gson-2.8.5-javadoc.jar', 'libs/gson-2.8.5-sources.jar')
     def room_version = "2.3.0" //Room Version

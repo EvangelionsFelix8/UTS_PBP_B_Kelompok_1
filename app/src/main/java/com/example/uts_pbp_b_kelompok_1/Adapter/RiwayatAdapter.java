@@ -68,12 +68,6 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         TicketRoom ticket = ticketList.get(position);
-        //holder.tvKodeBooking.setText("1");
-        //holder.tvTanggal.setText("1 Januari 2022");
-        //holder.tvNamaEvent.setText("Konser Rock Halal");
-        //holder.tvVenue.setText("Mojosongo");
-        //holder.tvNamaPemilik.setText("Ravelino");
-
         holder.tvKodeBooking.setText(Integer.toString(ticket.getKodeticket()));
        holder.tvTanggal.setText(ticket.getEventDate());
         holder.tvNamaEvent.setText(ticket.getEventName());
