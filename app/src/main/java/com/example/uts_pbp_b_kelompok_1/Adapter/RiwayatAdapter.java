@@ -20,7 +20,6 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
-
 public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHolder> {
 
     private List<TicketRoom> ticketList;
