@@ -27,12 +27,15 @@
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/rv_event.xml" value="0.22447916666666667" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/rv_riwayat.xml" value="0.33" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2866666666666667" />
+        <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/activity_detail_event.xml" value="0.2" />
+        <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/activity_detail_ticket.xml" value="0.25" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/activity_login.xml" value="0.14375" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/activity_main.xml" value="0.20425724637681159" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/activity_register.xml" value="0.20425724637681159" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/activity_splash_screen.xml" value="0.20425724637681159" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/dialog_edit_profile.xml" value="0.23097826086956522" />
+        <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/fragment_detail_ticket.xml" value="0.25" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/fragment_home.xml" value="0.20425724637681159" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Kuliah/Semester5/PBP/TempatTubesPBP/app/src/main/res/layout/fragment_profile_edit.xml" value="0.23822463768115942" />

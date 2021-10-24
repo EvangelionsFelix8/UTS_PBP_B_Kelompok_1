@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/white">
+    android:backgroundTint="@color/backgroundColor">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
-        android:backgroundTint="@color/backgroundColor"
+        android:backgroundTint="@color/putihCustom"
         app:cardCornerRadius="30dp"
         tools:context=".FragmentDetailTicket">
 
@@ -22,28 +22,21 @@
             android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btnBack"
-                android:layout_width="54dp"
-                android:layout_height="54dp"
-                android:layout_marginTop="5dp"
-                android:backgroundTint="@color/backgroundColor"
-                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
-
             <TextView
                 android:id="@+id/tvTicketDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
                 android:fontFamily="@font/rubikmono"
                 android:text="@string/your_ticket"
-                android:textColor="@color/white"
+                android:textColor="@color/backgroundColor"
                 android:textSize="28sp" />
         </LinearLayout>
 
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/header"
             android:layout_marginTop="60dp">
 
@@ -174,8 +167,22 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/venue_tiket"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:layout_marginBottom="20dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvVenueTiket"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="OK"
+                    app:backgroundTint="@color/backgroundColor"
+                    app:cornerRadius="30dp"
+                    android:id="@+id/btnBack"/>
             </LinearLayout>
-        </ScrollView>
+
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </androidx.cardview.widget.CardView>

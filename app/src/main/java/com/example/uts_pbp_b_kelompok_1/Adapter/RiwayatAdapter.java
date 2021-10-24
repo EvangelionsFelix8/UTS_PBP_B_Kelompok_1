@@ -17,6 +17,7 @@ import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Entity.TicketRoom;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 import com.example.uts_pbp_b_kelompok_1.R;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.List;
 
@@ -80,7 +81,7 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
 
 //                Deklarasi Atribut dari Fragment
                 TextView tvNamaEvent, tvPemilikTiket, tvKodeBooking, tvSection, tvTanggalWaktu, tvVenue, tvSeat;
-                ImageButton btnBack;
+                MaterialButton btnBack;
 
 //                Mendapatkan Id pada activity
                 tvNamaEvent = newLayout.findViewById(R.id.tvNamaTiket);
@@ -97,7 +98,7 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
                 tvPemilikTiket.setText(ticket.getNamaPemilik());
                 tvKodeBooking.setText(Integer.toString(ticket.getKodeticket()));
                 tvSection.setText(ticket.getSeatSection());
-                tvTanggalWaktu.setText(ticket.getEventDate());
+                tvTanggalWaktu.setText(ticket.getEventDate() + "\n" +ticket.getTime());
                 tvVenue.setText(ticket.getEventVenue());
                 tvSeat.setText(ticket.getSeatNumber());
 
@@ -109,11 +110,11 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
                 popup.show();
 
                 btnBack.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+                  @Override
+                  public void onClick(View view) {
                         popup.dismiss();
-                    }
-                });
+                   }
+               });
             }
         });
     }
