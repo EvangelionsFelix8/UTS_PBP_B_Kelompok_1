@@ -195,7 +195,7 @@ public class FragmentProfileEdit extends Fragment {
 
     public void onBackPressed() {
        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.popBackStack();
+       fragmentManager.popBackStack();
     }
 
 
