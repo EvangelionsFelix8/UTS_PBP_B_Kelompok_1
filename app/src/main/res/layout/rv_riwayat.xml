@@ -52,7 +52,6 @@
             android:id="@+id/itemRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_toEndOf="@id/itemLeft"
             android:orientation="vertical"
             android:paddingVertical="10dp">
