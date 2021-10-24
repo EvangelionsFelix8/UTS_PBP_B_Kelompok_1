@@ -43,14 +43,6 @@ public class OrderActivity extends AppCompatActivity {
 
         binding.setEvent(event);
 
-//        String eventName = event.getNamaEvent();
-//        String eventDate = event.getTanggalEvent();
-//        String eventVenue = event.getVenueEvent();
-//        String eventAlamat = event.getAlamatEvent();
-//        String seatSection= spinnerSection.getSelectedItem().toString();
-//        String seatNumber = spinnerSeat.getSelectedItem().toString();
-//        String eventTime = spinnerTime.getSelectedItem().toString();
-
         spinnerSection = findViewById(R.id.spinnerSection);
         spinnerSeat = findViewById(R.id.spinnerSeatNumber);
         spinnerTime = findViewById(R.id.spinnerTime);
@@ -62,15 +54,7 @@ public class OrderActivity extends AppCompatActivity {
         btnPesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                ticketRoom.setEventName(eventName);
-//                ticketRoom.setEventDate(eventDate);
-//                ticketRoom.setEventVenue(eventVenue);
-//                ticketRoom.setEventAddress(eventAlamat);
-//                ticketRoom.setTime(eventTime);
-//                ticketRoom.setSeatSection(seatSection);
-//                ticketRoom.setSeatNumber(seatNumber);
                 addTicket();
-//                Toast.makeText(OrderActivity.this, "Berhasil Membeli Tiket", Toast.LENGTH_SHORT).show();
                 onBackPressed();
             }
         });

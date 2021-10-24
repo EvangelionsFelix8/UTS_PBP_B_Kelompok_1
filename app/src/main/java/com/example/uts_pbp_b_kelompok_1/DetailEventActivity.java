@@ -286,59 +286,6 @@ public class DetailEventActivity extends AppCompatActivity implements OnMapReady
                 ), LAYER_BELOW_ID);
     }
 
-//    private void drawNavigationPolylineRoute(final DirectionsRoute route) {
-//        if (mapboxMap != null) {
-//            mapboxMap.getStyle(new Style.OnStyleLoaded() {
-//                @Override
-//                public void onStyleLoaded(@NonNull Style style) {
-//                    List<Feature> directionsRouteFeatureList = new ArrayList<>();
-//                    LineString lineString = LineString.fromPolyline(route.geometry(), PRECISION_6);
-//                    List<Point> coordinates = lineString.coordinates();
-//                    for (int i = 0; i < coordinates.size(); i++) {
-//                        directionsRouteFeatureList.add(Feature.fromGeometry(LineString.fromLngLats(coordinates)));
-//                    }
-//                    dashedLineDirectionsFeatureCollection = FeatureCollection.fromFeatures(directionsRouteFeatureList);
-//                    GeoJsonSource source = style.getSourceAs(SOURCE_ID);
-//                    if (source != null) {
-//                        source.setGeoJson(dashedLineDirectionsFeatureCollection);
-//                    }
-//                }
-//            });
-//        }
-//    }
-
-//    @SuppressWarnings( {"MissingPermission"})
-//    private void getRoute(Point destination) {
-//        MapboxDirections client = MapboxDirections.builder()
-//                .origin(originPosition)
-//                .destination(destination)
-//                .overview(DirectionsCriteria.OVERVIEW_FULL)
-//                .profile(DirectionsCriteria.PROFILE_WALKING)
-//                .accessToken(getString(R.string.mapbox_access_token))
-//                .build();
-//        client.enqueueCall(new Callback<DirectionsResponse>() {
-//            @Override
-//            public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
-//                if (response.body() == null) {
-//                    Timber.d( "No routes found, make sure you set the right user and access token.");
-//                    return;
-//                } else if (response.body().routes().size() < 1) {
-//                    Timber.d( "No routes found");
-//                    return;
-//                }
-//                drawNavigationPolylineRoute(response.body().routes().get(0));
-//            }
-//
-//            @Override
-//            public void onFailure(Call<DirectionsResponse> call, Throwable throwable) {
-//                Timber.d("Error: %s", throwable.getMessage());
-//                if (!throwable.getMessage().equals("Coordinate is invalid: 0,0")) {
-//                    Toast.makeText(DetailEventActivity.this,
-//                            "Error: " + throwable.getMessage(), Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-//    }
 
     private void getRoute(MapboxMap mapboxMap, Point origin, Point destination){
         MapboxDirections client = MapboxDirections.builder()
