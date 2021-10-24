@@ -20,11 +20,14 @@
         <entry key="..\:/KULIAH/Semester 5/Pemrograman Berbasis Platform/Tugas Besar UTS/UTS_PBP_B_Kelompok_1/app/src/main/res/layout/rv_event.xml" value="0.1" />
         <entry key="..\:/KULIAH/Semester 5/Pemrograman Berbasis Platform/Tugas Besar UTS/UTS_PBP_B_Kelompok_1/app/src/main/res/layout/rv_riwayat.xml" value="0.15715579710144928" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/activity_detail_event.xml" value="0.22447916666666667" />
+        <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/activity_detail_ticket.xml" value="0.10916919959473151" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/activity_order.xml" value="0.22447916666666667" />
-        <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/dialog_edit_profile.xml" value="0.10916919959473151" />
+        <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/dialog_edit_profile.xml" value="0.25" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_detail_ticket.xml" value="0.33" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_home.xml" value="0.10916919959473151" />
+        <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_profile_edit.xml" value="0.22447916666666667" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_riwayat.xml" value="0.22447916666666667" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_riwayat_fragment.xml" value="0.22447916666666667" />
         <entry key="..\:/Kuliah/AndroidStudio/PBP/Tubes UTS/app/src/main/res/layout/fragment_riwayat_kosong.xml" value="0.25" />

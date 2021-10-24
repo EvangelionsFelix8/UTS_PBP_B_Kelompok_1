@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class FragmentDetailTicket extends Fragment {
-
+    
     private static final String bund_namaEvent = "namaEvent";
     private static final String bund_namaPemilik = "namaPemilik";
     private static final String bund_kodeBooking = "kodeBooking";
@@ -18,6 +18,13 @@ public class FragmentDetailTicket extends Fragment {
     private static final String bund_seatNumber = "seatNumber";
     private static final String bund_tanggal = "tanggal";
     private static final String bund_venue = "venue";
+    private TextView tvNamaEvent;
+    private TextView tvNamaPemilik;
+    private TextView tvKodeBooking;
+    private TextView tvSection;
+    private TextView tvSeatNumber;
+    private TextView tvTanggal;
+    private TextView tvVenue;
 
     public FragmentDetailTicket() {
         // Required empty public constructor
@@ -45,6 +52,8 @@ public class FragmentDetailTicket extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
+        View root = inflater.inflate(R.layout.fragment_detail_ticket, container, false);
+
         int kodeBooking = getArguments().getInt(bund_kodeBooking);
         String namaEvent = getArguments().getString(bund_namaEvent);
         String namaPemilik = getArguments().getString(bund_namaPemilik);
@@ -53,7 +62,22 @@ public class FragmentDetailTicket extends Fragment {
         String tanggal = getArguments().getString(bund_tanggal);
         String venue = getArguments().getString(bund_venue);
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_ticket, container, false);
+        tvNamaEvent = root.findViewById(R.id.tvNamaTiket);
+        tvNamaPemilik = root.findViewById(R.id.tvNamaPemilikTiket);
+        tvKodeBooking = root.findViewById(R.id.tvKodeBookingTiket);
+        tvSection = root.findViewById(R.id.tvSectionTiket);
+        tvSeatNumber = root.findViewById(R.id.tvSeatNumberTiket);
+        tvTanggal = root.findViewById(R.id.tvTanggalTiket);
+        tvVenue = root.findViewById(R.id.tvVenueTiket);
+
+        tvKodeBooking.setText(Integer.toString(kodeBooking));
+        tvNamaEvent.setText(namaEvent);
+        tvNamaPemilik.setText(namaPemilik);
+        tvSection.setText(section);
+        tvSeatNumber.setText(seatNumber);
+        tvTanggal.setText(tanggal);
+        tvVenue.setText(venue);
+
+        return root;
     }
 }

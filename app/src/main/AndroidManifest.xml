@@ -16,9 +16,7 @@
         android:theme="@style/Theme.UTS_PBP_B_Kelompok_1">
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-<!--            android:screenOrientation="fullSensor"-->
-
+            android:exported="true" /> <!-- android:screenOrientation="fullSensor" -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
@@ -30,19 +28,21 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DetailEventActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".OrderActivity"
-            android:exported="true"></activity>
-        <receiver android:name=".NotificationReceiver"
-            android:exported="true"
-            android:enabled="true"/>
+            android:exported="true" />
+
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentRiwayat extends Fragment {
+public class FragmentRiwayat extends Fragment{
 
     private RecyclerView rvRiwayat;
     private UserPreferences userPreferences;
