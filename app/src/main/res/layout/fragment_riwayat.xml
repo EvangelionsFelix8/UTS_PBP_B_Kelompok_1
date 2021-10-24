@@ -4,10 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".FragmentRiwayat">
+    tools:context=".FragmentRiwayat"
+    android:background="@color/backgroundColor">
 
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubikmono"
+        android:text="@string/riwayat"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        tools:ignore="RelativeOverlap"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="75dp"
         android:id="@+id/rvRiwayat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
