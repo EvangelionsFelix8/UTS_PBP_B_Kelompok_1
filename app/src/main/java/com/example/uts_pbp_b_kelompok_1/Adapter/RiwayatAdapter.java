@@ -1,36 +1,26 @@
 package com.example.uts_pbp_b_kelompok_1.Adapter;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uts_pbp_b_kelompok_1.Database.Database;
 import com.example.uts_pbp_b_kelompok_1.Entity.TicketRoom;
-import com.example.uts_pbp_b_kelompok_1.FragmentDetailTicket;
 import com.example.uts_pbp_b_kelompok_1.Preferences.UserPreferences;
 import com.example.uts_pbp_b_kelompok_1.R;
 
 import java.util.List;
 
 public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHolder> {
-
-    private static final String bund_namaEvent = "namaEvent";
-    private static final String bund_namaPemilik = "namaPemilik";
-    private static final String bund_kodeBooking = "kodeBooking";
-    private static final String bund_section = "section";
-    private static final String bund_seatNumber = "seatNumber";
-    private static final String bund_tanggal = "tanggal";
-    private static final String bund_venue = "venue";
 
     private List<TicketRoom> ticketList;
     private Context context;
@@ -64,10 +54,6 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
             cardView = itemView.findViewById(R.id.card_view);
 //            ivLogoEvent = itemView.findViewById(R.id.ivLogoEvent);
         }
-
-        public void setData(String ticket, int position){
-            tvKodeBooking.setText(ticket);
-        }
     }
 
     @NonNull
@@ -89,33 +75,45 @@ public class RiwayatAdapter extends RecyclerView.Adapter<RiwayatAdapter.viewHold
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                View newLayout = LayoutInflater.from(builder.getContext()).inflate(R.layout.fragment_detail_ticket, null);
 
-                Bundle bundle = new Bundle();
-                // Save data here
-                bundle.putInt(bund_kodeBooking, ticket.getKodeticket());
-                bundle.putString(bund_namaEvent, ticket.getEventName());
-                bundle.putString(bund_namaPemilik, ticket.getNamaPemilik());
-                bundle.putString(bund_section, ticket.getSeatSection());
-                bundle.putString(bund_seatNumber, ticket.getSeatNumber());
-                bundle.putString(bund_tanggal, ticket.getEventDate());
-                bundle.putString(bund_venue, ticket.getEventVenue());
+//                Deklarasi Atribut dari Fragment
+                TextView tvNamaEvent, tvPemilikTiket, tvKodeBooking, tvSection, tvTanggalWaktu, tvVenue, tvSeat;
+                ImageButton btnBack;
 
-                Fragment frag = new FragmentDetailTicket();
-                frag.setArguments(bundle);
+//                Mendapatkan Id pada activity
+                tvNamaEvent = newLayout.findViewById(R.id.tvNamaTiket);
+                tvPemilikTiket = newLayout.findViewById(R.id.tvNamaPemilikTiket);
+                tvKodeBooking = newLayout.findViewById(R.id.tvKodeBookingTiket);
+                tvSection = newLayout.findViewById(R.id.tvSectionTiket);
+                tvTanggalWaktu = newLayout.findViewById(R.id.tvTanggalTiket);
+                tvVenue = newLayout.findViewById(R.id.tvVenueTiket);
+                tvSeat = newLayout.findViewById(R.id.tvSeatNumberTiket);
+                btnBack = newLayout.findViewById(R.id.btnBack);
 
-                AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.layout_fragment, frag).addToBackStack(null).commit();
+//                Mengeset Tampilan TextView
+                tvNamaEvent.setText(ticket.getEventName());
+                tvPemilikTiket.setText(ticket.getNamaPemilik());
+                tvKodeBooking.setText(Integer.toString(ticket.getKodeticket()));
+                tvSection.setText(ticket.getSeatSection());
+                tvTanggalWaktu.setText(ticket.getEventDate());
+                tvVenue.setText(ticket.getEventVenue());
+                tvSeat.setText(ticket.getSeatNumber());
 
+//                menampilkan View builder dengan layout diolog
+                builder.setView(newLayout);
 
-//                        FragmentDetailTicket.newInstance(ticket.getKodeticket(), ticket.getEventName(),
-//                        ticket.getNamaPemilik(), ticket.getSeatSection(), ticket.getSeatNumber(),
-//                        ticket.getEventDate(), ticket.getEventVenue());
-//                FragmentManager fm = frag.getFragmentManager();
-//                FragmentTransaction ft = fm.beginTransaction();
-//                ft.replace(R.id.layout_fragment, frag);
-//                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-//                ft.addToBackStack(null);
-//                ft.commit();
+//                Show Dialog
+                AlertDialog popup = builder.create();
+                popup.show();
+
+                btnBack.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        popup.dismiss();
+                    }
+                });
             }
         });
     }
